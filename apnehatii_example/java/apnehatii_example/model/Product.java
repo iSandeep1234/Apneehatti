@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Entity
 @ToString
 @Table(name = "PRODUCT", schema = "LF")
-public class Product extends PersistedObject {
+public class Product extends Persistence {
 
     private String productName;
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
