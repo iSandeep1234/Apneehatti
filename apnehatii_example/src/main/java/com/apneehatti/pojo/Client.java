@@ -3,11 +3,10 @@ package com.apneehatti.pojo;
 import javax.persistence.Column;
 import javax.persistence.Table;
 
-import com.apneehatti.constant.Status;
-import apnehatii_example.model.User;
+import apnehatii_example.model.ClientCategory;
 
-@Table(name = "ADDRESS", schema = "LF")
-public class Address {
+@Table(name = "CLIENT", schema = "LF")
+public class Client {
 	
 	@Column(name="name")
 	 private String name;
@@ -30,14 +29,8 @@ public class Address {
 	@Column(name="pinCode")
 	    private long pinCode;
 	
-	@Column(name="status")
-	    private Status status;
-	
-	@Column(name="isDefault")
-	    private Boolean isDefault;
-	
-	@Column(name="user")
-	    private User user;
+	@Column(name="clientCategory")
+	    private ClientCategory clientCategory;
 
 	public String getName() {
 		return name;
@@ -83,7 +76,6 @@ public class Address {
 		return state;
 	}
 
-	
 	public void setState(String state) {
 		this.state = state;
 	}
@@ -96,28 +88,12 @@ public class Address {
 		this.pinCode = pinCode;
 	}
 
-	public Status getStatus() {
-		return status;
+	public ClientCategory getClientCategory() {
+		return clientCategory;
 	}
 
-	public void setStatus(Status status) {
-		this.status = status;
-	}
-
-	public Boolean getIsDefault() {
-		return isDefault;
-	}
-
-	public void setIsDefault(Boolean isDefault) {
-		this.isDefault = isDefault;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
+	public void setClientCategory(ClientCategory clientCategory) {
+		this.clientCategory = clientCategory;
 	}
 	
 	
