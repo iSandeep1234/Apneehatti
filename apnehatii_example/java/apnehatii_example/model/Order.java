@@ -12,9 +12,7 @@ import javax.persistence.*;
 @Entity
 @ToString
 @Table(name = "ORDER", schema = "LF")
-public class Order extends PersistedObject
-
-{
+public class Order extends PersistedObject {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "USER_ID", nullable = false)
@@ -31,8 +29,4 @@ public class Order extends PersistedObject
     private Payment payment;
     private Status status;
     private String paidBy;
-    
-
-    
-    
 }
